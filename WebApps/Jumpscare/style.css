@@ -1,6 +1,6 @@
 *{
    color: #fff;
-   font-size: 20px;
+   font-size: 24px;
    font-family: monospace;
 }
 body{
@@ -11,12 +11,13 @@ header{
    display: flex;
    justify-content: center;
    align-items: center;
+   height: 100vh;
 }
 
 header button{
    border: 1px white solid;
    border-radius: 10px;
-   padding: 5px;
+   padding: 10px;
    transition: background 1s;
    background-color: #958fa3;
 }

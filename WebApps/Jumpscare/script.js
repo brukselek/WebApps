@@ -10,6 +10,7 @@ function jumpscare(){
    scareDiv.style.justifyContent = "center";
    scareDiv.style.alignItems = "center";
    scareDiv.style.zIndex = "9999";
+   
 
    let img = document.createElement('img');
    img.src="foxyPlushimg.webp";
