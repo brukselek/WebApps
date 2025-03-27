@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Quiz</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="container" id="quiz-container">
+      <!-- div przechowujacy progres quizu -->
+      <div class="quiz-progress" id="quizProgress"></div>
+      <!-- div przechowujacy pytanie oraz temat quizu -->
+      <div class="question-container" id="questionContainer"></div>
+      <!-- div przechowujacy pytania quizu -->
+      <div class="answer-container" id="answerContainer"></div>
+      <h2 id = "quizResult"></h2>
+      <button id = nextButton>Nastepne pytanie</button>
+   </div>
+   <footer>
+   <!-- Prosty przycisk zmiany motywu tla -->
+   <button id = "modeSwitch" onclick = "themeColor()">
+         <img src = "dark_mode.png" alt = "dark mode" id = "themeIcon">
+      </button>
+   </footer>
+   <script src = "script.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>BMICalc</title>
+   <link rel="stylesheet" href="style.css">
+   <script src="script.js" defer></script>
+</head>
+<body>
+   <div class="container">
+      <h1>This app will calculate your BMI</h1>
+      <div class="panel">
+         <form>
+            <div>
+               <label for="getHeight">Please input your height: </label>
+               <input id="getHeight" placeholder="Height in cm" type="number"></input>
+            </div>
+            <div>
+               <label for="getWeight">Please input your weight: </label>
+               <input id="getWeight" placeholder="Weight in kgs" type="number"></input>
+            </div>
+            <button type="button" onclick="calculateBMI()">Calculate BMI</button>
+         </form>
+
+         <h2>Your BMI:</h2>
+         <div id="result">Your BMI Results will appear here</div>
+      </div>   
+   </div>
+</body>
+</html>

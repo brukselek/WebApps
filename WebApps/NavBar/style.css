@@ -1,0 +1,33 @@
+*{
+   font-size: 20px;
+}
+
+body{
+   background-color: #a47864;
+}
+
+nav{
+   background-color: #81664b;
+   font-family: Roboto;
+   display: flex;
+   align-items: center;
+}
+
+nav a{
+   text-decoration: none;
+   color: #fff;
+   font-weight: 500;
+   font-size: 16px;
+   padding: 15px;
+   text-align: center;
+}
+
+nav a:hover{
+   text-decoration: underline;
+   background-color: #f1f1f3;
+   color: #705a43;
+}
+
+nav a.active{
+   background-color: #bca78f;
+}

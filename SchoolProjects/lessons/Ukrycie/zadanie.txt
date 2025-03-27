@@ -1,0 +1,4 @@
+Zadanie:
+Stwórz trzy bloki, każdy w innym kolorze.
+Stwórz trzy przyciski, które będą ukrywały/pokazywały odpowiednie bloki.
+Użyj JavaScript, aby po kliknięciu w przycisk ukryć lub pokazać odpowiedni blok.

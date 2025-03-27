@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Kolory</title>
+</head>
+<body>
+   <p>Wartosci od 0 do 30 czerwieniem, do 60 żółcie, do 150 zielenie, do 250 niebieskie, do 360 fiolet i purpura</p>
+
+   <input type="number" id="colorValue">
+   <input type="button" id="colorGenerator" onclick="palleteGenerator()" value="Generuj paletę">
+   <table style="border: 1px solid black; width: 90%; margin: auto; ">
+      <tr>
+         <th colspan="4" id="mainColor">Kolor główny</th>
+      </tr>
+      <tr>
+         <th id="secondColor">Kolor 2</th>
+         <th id="thirdColor">Kolor 3</th>
+         <th id="fourthColor">Kolor 4</th>
+         <th id="fifthColor">Kolor 5</th>
+      </tr>
+   </table>
+   <script>
+      function palleteGenerator(){
+         let colorValue = parseFloat(document.getElementById('colorValue').value);
+
+         document.getElementById('mainColor').style.backgroundColor = `hsl(${colorValue}, 100%, 50%)`;
+         document.getElementById('secondColor').style.backgroundColor = `hsl(${colorValue}, 80%, 50%)`;
+         document.getElementById('thirdColor').style.backgroundColor = `hsl(${colorValue}, 60%, 50%)`;
+         document.getElementById('fourthColor').style.backgroundColor = `hsl(${colorValue}, 40%, 50%)`;
+         document.getElementById('fifthColor').style.backgroundColor = `hsl(${colorValue}, 20%, 50%)`;
+      }
+   </script>
+</body>
+</html>

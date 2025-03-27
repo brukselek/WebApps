@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Zmiana Zdjecia</title>
+</head>
+<body>
+   <div>
+      <img src="1.jpg" onclick="changeMainImage('1.jpg')">
+      <img src="2.jpg" onclick="changeMainImage('2.jpg')">
+      <img src="3.jpg" onclick="changeMainImage('3.jpg')">
+      <img src="4.jpg" onclick="changeMainImage('4.jpg')">
+      <img src="5.jpg" onclick="changeMainImage('5.jpg')">
+   </div>
+   <div>
+      <img src="1.jpg" id="mainImage" alt="Main Image">
+      <img src="icon-off.png" alt="icon off" id="iconChange" onclick="changeIcon()">
+   </div>
+   <script>
+      function changeMainImage(imageSrc){
+         const mainImage = document.getElementById('mainImage')
+      
+         mainImage.src = imageSrc;
+      }
+      function changeIcon(){
+         const currentIcon = document.getElementById('iconChange');
+         
+         if(currentIcon.src.includes("icon-off.png")){
+            document.getElementById('iconChange').src = "icon-on.png";
+         }
+         else{
+            document.getElementById('iconChange').src = "icon-off.png";
+         }
+      }
+   </script>
+</body>
+</html>
