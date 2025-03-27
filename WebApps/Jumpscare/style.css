@@ -1,0 +1,27 @@
+*{
+   color: #fff;
+   font-size: 20px;
+   font-family: monospace;
+}
+body{
+   background-color: #8e7ab8;
+}
+
+header{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+header button{
+   border: 1px white solid;
+   border-radius: 10px;
+   padding: 5px;
+   transition: background 1s;
+   background-color: #958fa3;
+}
+header button:hover{
+   cursor: pointer;
+   transition: background 1s;
+   background-color: #696670;
+}
