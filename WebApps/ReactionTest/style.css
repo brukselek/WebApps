@@ -1,0 +1,41 @@
+*{
+   font-size: 30px;
+   font-family: fantasy;
+}
+
+body{
+   background-color: #0067a7;
+   overflow: hidden;
+}
+
+.container{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
+   gap: 25px;
+}
+
+.container #timeDisplay{
+   border: 3px solid #172035;
+   background-color: #b9c5df;
+   border-radius: 15px;
+   padding: 15px;
+}
+
+header button{
+   transition: all 1s;
+   padding: 15px;
+   border: 3px solid #172035;
+   border-radius: 50px;
+   background-color: #7284b7;
+   color: #172035;
+}
+
+header button:hover{
+   transition: all 1s;
+   background-color: #9aa7cb;
+   color: #273659;
+   cursor: pointer;
+}
