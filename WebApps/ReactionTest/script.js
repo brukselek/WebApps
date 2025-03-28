@@ -1,3 +1,6 @@
+let startTime;
+
+
 function createTimeDisplay(){
    let timeDiv = document.createElement('div');
    timeDiv.id = "timeDisplay";
@@ -9,10 +12,34 @@ function createTimeDisplay(){
    if (container && header) {
       container.insertBefore(timeDiv, header);
    }
+
+   return timeDiv;
+}
+
+function updateTimeDisplay(time){
+   let timeDiv = document.getElementById('timeDisplay');
+   if(!timeDiv) createTimeDisplay();
+   timeDiv.textContent = `Reaction Time: ${time.toFixed(2)}ms`;
+}
+
+function stopTest(){
+   let reactionTime = performance.now() - startTime;
+   updateTimeDisplay(reactionTime);
+   document.body.style.background = "#457725";
 }
 
 function startReactionTest(){
-   console.log("Started reaction test");
+   let button = document.querySelector('button');
+   button.disabled = true;
+
+   setTimeout(() => {
+      startTime = performance.now();
+      document.body.style.backgroundColor = "#901E1D";
+
+      document.body.addEventListener("click", stopTest, {once:true})
+      setTimeout(button.disabled = false, 2000);
+
+   }, Math.floor(Math.random() * 5000) + 1000);
 }
 
 createTimeDisplay();
