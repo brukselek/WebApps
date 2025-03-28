@@ -1,0 +1,33 @@
+*{
+   font-family: Geneva;
+}
+
+body{
+   background-color: #77b5fe;
+   background: url(puffer.jpg) no-repeat;
+   background-size: cover;
+   background-position: 0% 25%;
+}
+
+.container{
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+}
+
+h1{
+   font-size: 36px;
+   font-weight: 700
+}
+
+h2{
+   font-size: 30px;
+}
+
+.board{
+   height: 75vh;
+   width: 100vh;
+   border: 5px solid #647489;
+   background-color: #b5bec9;
+   border-radius: 50px;
+}
