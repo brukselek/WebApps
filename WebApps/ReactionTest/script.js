@@ -37,7 +37,7 @@ function startReactionTest(){
       document.body.style.backgroundColor = "#901E1D";
 
       document.body.addEventListener("click", stopTest, {once:true})
-      setTimeout(button.disabled = false, 2000);
+      button.disabled = false;
 
    }, Math.floor(Math.random() * 5000) + 1000);
 }
