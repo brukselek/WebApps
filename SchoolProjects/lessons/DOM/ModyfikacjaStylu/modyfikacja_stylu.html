@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Modyfikacja stylu</title>
+</head>
+<body>
+   <div style="width: 50%;">
+      Dziś promocja na strzyżenie włosów
+      <h2>Konfigurator stylu</h2>
+
+      <div>
+         <h2>Podaj kolor tła</h2>
+         <button style="background-color: indigo;" onclick="changeBgColor('indigo')">Indigo</button>
+         <button style="background-color: steelblue;" onclick="changeBgColor('steelblue')">SteelBlue</button>
+         <button style="background-color: olive;" onclick="changeBgColor('olive')">Olive</button>
+      </div>
+      
+      <div>
+         <h2>Podaj kolor czcionki</h2>
+         <select id="fontColor" onchange="changeColor()">
+            <option value="black">black</option>
+            <option value="red">red</option>
+            <option value="blue">blue</option>
+         </select>   
+      </div>
+      
+      <div>
+         <p>Podaj rozmiar czcionki w procentach (np 200%)</p>
+         <input type="number">
+      </div>
+
+      <div>
+         <p>Czy rysunek ma mieć ramkę?</p>
+         <input type="checkbox">Rysuj ramkę
+      </div>
+
+      <div>      
+         <p>Jaki jest typ punktora listy?</p>
+         <input type="radio">Dysk
+         <input type="radio">Kwadrat
+         <input type="radio">Okrąg
+      </div>
+   
+<script>
+   function changeBgColor(color){
+      document.body.style.backgroundColor = color;
+   }
+
+   function changeColor(){
+      let fontColor = document.getElementById('fontColor').value;
+      document.body.style.color = fontColor;
+   }
+
+   function fontSize
+</script>
+</body>
+</html>
