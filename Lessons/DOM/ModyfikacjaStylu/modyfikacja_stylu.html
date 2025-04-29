@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Modyfikacja stylu</title>
+</head>
+<body>
+   <div style="display: flex;">
+      <div style="width: 50%;">
+         Dziś promocja na strzyżenie włosów
+         <h2>Konfigurator stylu</h2>
+   
+         <div>
+            <h2>Podaj kolor tła</h2>
+            <button style="background-color: indigo;" onclick="changeBgColor('indigo')">Indigo</button>
+            <button style="background-color: steelblue;" onclick="changeBgColor('steelblue')">SteelBlue</button>
+            <button style="background-color: olive;" onclick="changeBgColor('olive')">Olive</button>
+         </div>
+         
+         <div>
+            <h2>Podaj kolor czcionki</h2>
+            <select id="fontColor" onchange="changeColor()">
+               <option value="black">black</option>
+               <option value="red">red</option>
+               <option value="blue">blue</option>
+            </select>   
+         </div>
+         
+         <div>
+            <p>Podaj rozmiar czcionki w procentach (np 200%)</p>
+            <input type="number" onchange="changeFontSize()" id="fontSize">
+         </div>
+   
+         <div>
+            <p>Czy rysunek ma mieć ramkę?</p>
+            <input type="checkbox" id="ifBorder" onchange="drawBorder()">Rysuj ramkę
+         </div>
+   
+         <div>      
+            <p>Jaki jest typ punktora listy?</p>
+            <input type="radio" name="radioButtons" onclick="listType(disc)">Dysk
+            <input type="radio" name="radioButtons" onclick="listType(square)">Kwadrat
+            <input type="radio" name="radioButtons" onclick="listType(circular)">Okrąg
+         </div>
+   </div>
+   <div id="mainContent" style="width: 50%;">
+      <img src="" alt="">
+      <ul>
+         <li>elem1</li>
+         <li>elem2</li>
+         <li>elem3</li>
+      </ul>
+      
+      <p>
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+         Sed laoreet neque sit amet lacus tristique euismod. 
+         Donec fermentum efficitur sapien, quis porta erat egestas sed. 
+         Duis eu ornare metus. Vivamus nibh odio, maximus eget lobortis a, 
+         euismod at nulla. In a elit consectetur, consequat lectus vitae, 
+         fermentum mi. Suspendisse commodo felis non ex suscipit porttitor. 
+         Curabitur vel luctus est, et placerat sapien. 
+         Vestibulum at diam semper velit aliquam hendrerit. 
+         Proin molestie felis augue. Ut eu porttitor lorem. 
+         Phasellus ac urna lorem. Donec ullamcorper purus venenatis eros 
+         consequat hendrerit. Sed porta augue eget velit bibendum congue eu 
+         interdum massa. Nulla facilisis augue et viverra dapibus. 
+         Quisque vitae arcu vel ipsum mollis condimentum et at nisi.
+      </p>
+   </div>
+         
+<script>
+   function changeBgColor(color){
+      document.getElementById('mainContent').style.backgroundColor = color;
+   }
+
+   function changeColor(){
+      let fontColor = document.getElementById('fontColor').value;
+      document.getElementById('mainContent').style.color = fontColor;
+   }
+
+   function changeFontSize(){
+      const newFontSize = document.getElementById('fontSize').value + '%';
+      document.getElementById('mainContent').style.fontSize = newFontSize;
+   }
+
+   function drawBorder(){
+      if(ifBorder.checked){
+         document.getElementById('mainContent').style.border = "solid 1px black";
+      }
+   }
+
+   function listType(){
+
+   }
+</script>
+</body>
+</html>
