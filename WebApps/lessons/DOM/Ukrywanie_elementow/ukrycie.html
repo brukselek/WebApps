@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ukrywanie elementów w JavaScript</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Ukrywanie i pokazywanie elementów</h2>
+
+    <p id="p1">To jest pierwszy akapit.</p>
+    <p id="p2">To jest drugi akapit.</p>
+    <p id="p3">To jest trzeci akapit.</p>
+
+    <button onclick="toggleVisibility('p1')">Pokaż/Ukryj Akapit 1</button>
+    <button onclick="toggleVisibility('p2')">Pokaż/Ukryj Akapit 2</button>
+    <button onclick="toggleVisibility('p3')">Pokaż/Ukryj Akapit 3</button>
+    <button onclick="toggleVisibility('p3');toggleVisibility('p2');toggleVisibility('p1')">Pokaż/Ukryj wszystkie</button>
+    <script>
+        // Funkcja, która ukrywa lub pokazuje element
+        function toggleVisibility(pId) {
+            var element = document.getElementById(pId);
+            if (element.classList.contains('hidden')) {
+                element.classList.remove('hidden');
+            } else {
+                element.classList.add('hidden');
+            }
+        }
+    </script>
+
+</body>
+</html>
